@@ -1,8 +1,11 @@
 /* common style or utilities  */
 
 body {
-    margin: 5px;
+    margin: 0px;
+    width: 100%;
+    height: 3750px;
     font-family: 'Poppins', sans-serif;
+    align-items: center;
 }
 
 header {
@@ -12,14 +15,16 @@ header {
     margin: 0 auto;
 }
 
+main {
+    position: relative;
+    width: 1440px;
+    height: 3021px;
+    background: #FFFFFF;
+}
+
 /* header style start  */
 
 /* navigation var style  */
-
-/* .nav-section {
-    width: 1164px;
-    height: 44px;
-} */
 
 .navigation {
     padding-top: 42px;
@@ -31,7 +36,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 3px solid red;
     margin: 0px 124px 59px 156px;
     padding: 0px;
 }
@@ -84,7 +88,7 @@ nav li a {
     font-size: 16px;
 }
 
-/* deader title style  */
+/* header title style  */
 
 .container {
     display: grid;
@@ -97,7 +101,6 @@ nav li a {
 .head-title-section {
     display: flex;
     flex-direction: column;
-    border: 3px solid red;
 }
 
 .title-name {
@@ -150,18 +153,15 @@ nav li a {
 
 .banner-img-section {
     position: relative;
-    width: 556.01px;
+    width: 556px;
     height: 438px;
     transform: matrix(1, 0, 0, 1, 0, 0);
-    overflow: hidden;
-    border: 3px solid red;
     background-color: #3DBAFD;
+    overflow: hidden;
     border-radius: 0px 100px 0px 0px;
 }
 
 .banner-img-section img {
-    /* background-color: tomato; */
-    /* border: 5px solid yellow; */
     position: absolute;
     width: 556.01px;
     height: 438px;
@@ -169,11 +169,10 @@ nav li a {
     animation-play-state: running;
 }
 
-/* header:hover .banner-img-section img {
-    /* transform: rotate(-30deg) scale(1.2);
-    transform-origin: top right; */
-
-/* } */
+header:hover .head-title-section .title-name {
+    transform: scale(.9) skewY(5deg);
+    transition: transform 2s ease 0.2s;
+}
 
 @keyframes sliding {
     0% {
@@ -191,32 +190,30 @@ nav li a {
 
 /* main section style  */
 
-/* .players {
+.players-album {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 15px;
-    /* position: absolute; */
+    align-items: center;
+    justify-content: center;
+    margin-top: 52px;
+}
 
-/* width: 330px; */
-
-/* height: 474px; */
-
-/* left: 180px; */
-
-/* top: 747px; */
-
-/* background: #FFFFFF; */
-
-/* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); }*/
+.photo-album {
+    width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 27px;
+    grid-column-gap: 45px;
+    /* align-items: center; */
+}
 
 .player {
     width: 300px;
     height: 426px;
-    margin: 200px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* margin: 200px; */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     padding: 15px;
-    /* box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
     /* left: 15px; */
     /* top: 15px; */
 }
@@ -224,22 +221,9 @@ nav li a {
 .player-img img {
     width: 300px;
     height: 256px;
+    border-radius: 4px;
     /* margin: 15px; */
     /* background: url(image.png); */
-}
-
-.player-name {
-    width: 300px;
-    color: #18191F;
-    left: calc(50% - 300px/2);
-    /* top: 0%; */
-    /* bottom: 74.03%; */
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 40px;
-    margin: 0px;
 }
 
 .player-detail {
@@ -255,6 +239,21 @@ nav li a {
     /* top: 272px; */
 }
 
+.player-name {
+    width: 300px;
+    color: #18191F;
+    left: calc(50% - 300px/2);
+    /* top: 0%; */
+    /* bottom: 74.03%; */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    margin: 0px;
+    font-feature-settings: 'liga' off;
+}
+
 .player-info {
     width: 300px;
     color: #6C6C6C;
@@ -267,4 +266,135 @@ nav li a {
     font-size: 16px;
     line-height: 26px;
     margin: 0;
+    font-feature-settings: 'liga' off;
+}
+
+/* -------------
+footer part style 
+-------------- */
+
+footer {
+    padding: 5px;
+    margin: 20px auto;
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.logo-footer img {
+    width: 700px;
+    height: 150px;
+    padding-left: 110px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 75px;
+}
+
+.font-icon {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 30px;
+}
+
+.fab {
+    color: gray;
+    font-size: 20px;
+    border-radius: 45%;
+    padding: 9px;
+    background-color: rgba(128, 128, 128, 0.404);
+}
+
+.copy-right {
+    text-align: center;
+    font-size: 24px;
+}
+
+/*------------------------------------ 
+use media queries for mobile phone 
+-------------------------------------- */
+
+@media only screen and (max-width:688px) {
+    .navigation {
+        display: none;
+    }
+    /* ---------------------------
+    header-section-media-queries-
+    ---------------------------- */
+    header {
+        width: 100%;
+        padding-left: 19px;
+    }
+    .container {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding: 0;
+    }
+    header:hover .head-title-section .title-name {
+        transform: scale(1);
+    }
+    .title-name {
+        width: 278px;
+        height: 138px;
+        font-size: 36px;
+        line-height: 60px;
+        margin: 0;
+        padding-bottom: 65px;
+    }
+    .banner-img-section {
+        width: 329px;
+        height: 259px;
+        overflow: visible;
+    }
+    .banner-img-section img {
+        animation: paused;
+        width: 329px;
+        height: 259px;
+        ;
+    }
+    /*------------------------
+     main-section queries 
+     ------------------------*/
+    main {
+        width: 100%;
+    }
+    .photo-album {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+        padding: 0;
+        grid-row-gap: 0px;
+        grid-column-gap: 0px;
+    }
+    .player {
+        margin-left: 30px;
+        width: 315px;
+        height: 474px;
+        padding: 25px;
+        margin-bottom: 24px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+    }
+    /* --------------------
+    footer media queries 
+    -----------------------*/
+    footer {
+        width: 390px;
+    }
+    .logo-footer {
+        width: 380px;
+        height: px;
+    }
+    .logo-footer img {
+        padding-left: 0px;
+    }
 }
